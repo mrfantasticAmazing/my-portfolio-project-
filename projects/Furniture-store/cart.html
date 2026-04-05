@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | FurniCraft</title>
+    <meta name="description" content="Review your FurniCraft shopping cart before checkout.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">Free shipping on orders over $500</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="logo">FurniCraft</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button id="nav-search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <div style="position: relative;">
+                    <button id="nav-account-btn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                    <!-- Account Dropdown -->
+                    <div id="account-dropdown" class="account-dropdown">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="cart.html" class="cart-icon-link" aria-label="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-counter" class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide-Down Search Bar -->
+        <div id="search-container" class="search-container">
+            <div class="search-inner">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for furniture, collections...">
+                <button id="search-close-btn" class="search-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            <p class="breadcrumbs"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Cart</p>
+        </div>
+    </header>
+
+    <!-- Main Cart Content -->
+    <section class="section cart-section">
+        <div class="container cart-layout">
+
+            <!-- Left Column -->
+            <div class="cart-left-col">
+
+                <!-- Empty State -->
+                <div id="empty-cart-msg" class="empty-cart" style="display:none;">
+                    <i class="fa-solid fa-cart-shopping" style="font-size:48px;color:#D1D1D1;margin-bottom:20px;"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Looks like you haven't added anything yet.</p>
+                    <a href="shop.html" class="btn-brown" style="display:inline-block;margin-top:20px;padding:14px 32px;text-decoration:none;">Browse Products</a>
+                </div>
+
+                <!-- Cart Table -->
+                <div id="cart-table-wrap">
+                    <h3 class="cart-section-title">Cart Items</h3>
+                    <div class="cart-items-header">
+                        <span>Item</span>
+                        <span>Product</span>
+                        <span>Price</span>
+                        <span>Qty</span>
+                        <span>Total</span>
+                    </div>
+                    <div id="cart-items-list">
+                        <!-- Populated by cart.js -->
+                    </div>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="promo-container">
+                    <h3 class="cart-section-title" style="font-size:16px;">Promo Code</h3>
+                    <div class="promo-form">
+                        <input type="text" placeholder="Enter promo code (try FURNI10)">
+                        <button type="button" class="btn-brown">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Summary -->
+            <aside class="cart-summary-sidebar">
+                <div class="cart-summary">
+                    <h3 class="cart-section-title">Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <strong id="cart-subtotal">$0</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="cart-shipping">—</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <strong id="cart-total">$0</strong>
+                    </div>
+                    <button class="btn-brown btn-checkout">Proceed to Checkout</button>
+                    <p class="checkout-note"><i class="fa-solid fa-lock" style="margin-right:6px;color:#B8926A;"></i>Secure checkout &nbsp;·&nbsp; Free shipping over $500</p>
+                </div>
+                <!-- Trust Icons -->
+                <div class="cart-trust">
+                    <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><span>Fast Delivery</span></div>
+                    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><span>30-Day Returns</span></div>
+                    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span>Buyer Protection</span></div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- Recommended for You -->
+    <section class="section recommended-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align:left;font-size:24px;margin-bottom:30px;">Recommended for You</h2>
+            <div class="recommended-grid" id="recommended-grid">
+                <!-- Populated by cart.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Newsletter</h2>
+            <p class="newsletter-sub">Subscribe for updates &amp; exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit" class="btn-brown">Subscribe</button>
+            </form>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

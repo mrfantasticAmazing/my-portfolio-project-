@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FurniCraft</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Sustainable materials, timeless designs
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="logo">FurniCraft</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button id="nav-search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <div style="position: relative;">
+                    <button id="nav-account-btn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                    <!-- Account Dropdown -->
+                    <div id="account-dropdown" class="account-dropdown">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="cart.html" class="cart-icon-link" aria-label="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-counter" class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Full-Screen Search Overlay -->
+        <div id="search-container" class="search-container">
+            <div class="search-inner">
+                <button id="search-close-btn" class="search-close-btn" aria-label="Close Search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <input type="text" id="search-input" placeholder="Search furniture..." autocomplete="off">
+                <div class="search-suggestions">
+                    <p>Popular searches:</p>
+                    <div class="suggestion-tags">
+                        <span class="suggestion-tag">Sofa</span>
+                        <span class="suggestion-tag">Chair</span>
+                        <span class="suggestion-tag">Dining Table</span>
+                        <span class="suggestion-tag">Bed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="height: 200px; background-color: #F9F7F3; border-bottom: 1px solid #EAEAEA; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 30px;">
+        <div class="container">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 38px; color: #333; margin-bottom: 15px;">About Our Brand</h1>
+            <p class="breadcrumbs"><a href="index.html">Home</a> / About</p>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="section about-hero">
+        <div class="container">
+            <div class="about-hero-grid">
+                <div class="about-hero-img">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Modern Living Room">
+                </div>
+                <div class="about-hero-content">
+                    <h2 class="serif-title">Crafting Comfort and Elegance</h2>
+                    <p>At FurniCraft, we believe that your home is a reflection of your soul. Since our inception, we have been dedicated to blending high-end Scandinavian aesthetics with unparalleled comfort. Our mission is to provide pieces that aren't just furniture, but timeless treasures for your living space.</p>
+                    <a href="shop.html" class="btn-brown">Shop Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section our-story">
+        <div class="container text-center-block">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-text">
+                <p>Born from a passion for minimalist design and natural materials, FurniCraft started as a small workshop in 2018. Over the years, we've grown into a global brand, yet we remain committed to the handcrafted quality that defined our very first chair.</p>
+                <p>We source only the finest sustainable oaks and premium fabrics, ensuring that every piece that leaves our studio is built to last a lifetime. Our designs are inspired by the clean lines of nature and the warmth of a well-lived home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Grid -->
+    <section class="section mission-section" style="background-color: #F9F7F3;">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Sustainable Materials</h3>
+                    <p>We believe in beauty that doesn't cost the Earth. All our wood is FSC-certified.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To redefine modern living through simplicity, quality, and ethical craftsmanship.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fa-solid fa-hammer"></i></div>
+                    <h3>Premium Craftsmanship</h3>
+                    <p>Each piece is meticulously crafted by artisans who have mastered the art of furniture making.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your joy is our success. We provide personalized support for every unique home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Emma">
+                    <h4>Emma Larson</h4>
+                    <span>Creative Director</span>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mark">
+                    <h4>Mark Sterling</h4>
+                    <span>Head Designer</span>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sara">
+                    <h4>Sara Chen</h4>
+                    <span>Product Manager</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section cta-banner">
+        <div class="container text-center">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Explore our curated collections and bring a touch of elegance to your home.</p>
+            <a href="shop.html" class="btn-brown">Explore Shop</a>
+        </div>
+    </section>
+
+    <!-- Newsletter & Footer -->
+    <footer class="section newsletter-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Newsletter</h2>
+            <p class="newsletter-sub">Subscribe for updates & exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit" class="btn-brown">Subscribe</button>
+            </form>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

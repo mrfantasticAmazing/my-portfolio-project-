@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FurniCraft</title>
+    <meta name="description" content="Get in touch with the FurniCraft team for any inquiries or support.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Questions? We're here to help.
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="logo">FurniCraft</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button id="nav-search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <div style="position: relative;">
+                    <button id="nav-account-btn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                    <!-- Account Dropdown -->
+                    <div id="account-dropdown" class="account-dropdown">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="cart.html" class="cart-icon-link" aria-label="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-counter" class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Full-Screen Search Overlay -->
+        <div id="search-container" class="search-container">
+            <div class="search-inner">
+                <button id="search-close-btn" class="search-close-btn" aria-label="Close Search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <input type="text" id="search-input" placeholder="Search furniture..." autocomplete="off">
+                <div class="search-suggestions">
+                    <p>Popular searches:</p>
+                    <div class="suggestion-tags">
+                        <span class="suggestion-tag">Sofa</span>
+                        <span class="suggestion-tag">Chair</span>
+                        <span class="suggestion-tag">Dining Table</span>
+                        <span class="suggestion-tag">Bed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="contact-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="welcome-text">Have questions? We're here to help and would love to hear from you.</p>
+            <p class="breadcrumbs"><a href="index.html">Home</a> / Contact</p>
+        </div>
+    </header>
+
+    <!-- Main Contact Section -->
+    <section class="section contact-section">
+        <div class="container contact-layout">
+            <!-- Left: Contact Form -->
+            <div class="contact-form-container">
+                <h2 class="contact-subtitle">Contact Form</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="contact-subject" name="subject" required>
+                            <option value="" disabled selected>Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="order">Order Support</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" name="message" placeholder="Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-brown btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right: Contact Information -->
+            <div class="contact-info-container">
+                <h2 class="contact-subtitle">Contact Information</h2>
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <h4>Our Address</h4>
+                            <p>1234 Furniture St., Suite 100,<br>City, State 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9am - 6pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.318465646194!2d-105.0006248!3d39.7347953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f26978430e3%3A0xe7831d1020614144!2sFurniture%20Row!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" style="background-color: #F9F7F3;">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day return policy for most items in their original condition. Please contact our support team to initiate a return.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does shipping take?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard shipping usually takes 5-7 business days. Priority shipping is available for faster delivery within 2-3 business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I customize my order?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer customization options for many of our sofa and chair collections. Please visit our shop or contact us for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & Footer -->
+    <footer class="section newsletter-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Newsletter</h2>
+            <p class="newsletter-sub">Subscribe for updates & exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit" class="btn-brown">Subscribe</button>
+            </form>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

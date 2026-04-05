@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf Jama | Frontend React Developer</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section" class="bold-link">About</a></li>
+                <li><a href="#projects" class="bold-link">Work</a></li>
+                <li><a href="#contact" class="bold-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <section id="welcome-section">
+        <div class="welcome-content">
+            <h1 class="yusuf">I am Yusuf</h1>
+            <h3>A Frontend Developer</h3>
+            <p>I am a skilled front-end developer with expertise in creating responsive and user-friendly web interfaces. I specialize in React and modern JavaScript to deliver high-quality, innovative solutions for international clients.</p>
+            <div class="btn-box">
+                <a href="https://www.linkedin.com/in/yusuf-jama-88845134a/" target="_blank">HIRE ME</a>
+                <a href="#contact">LET'S TALK</a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="images/image-removebg-preview.png" alt="Yusuf Jama">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">HERE ARE SOME OF MY PROJECTS</h2>
+        <div class="projects-container">
+            
+            <div class="grid-item">
+                <a href="projects/dentist-site/" target="_blank">
+                    <img src="images/teeth_whitening-gVWxnHTH.png" alt="Modern Dental Clinic">
+                    <div class="project-info">
+                        <p>Modern Dental Clinic</p>
+                        <span>React · UI/UX</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="projects/furniture-store/" target="_blank">
+                    <img src="images/furniture.jpg" alt="Furniture Store">
+                    <div class="project-info">
+                        <p>Furniture E-commerce</p>
+                        <span>HTML · CSS · Design</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="projects/dashboard/" target="_blank">
+                    <img src="images/dashboard.jpg" alt="Dashboard">
+                    <div class="project-info">
+                        <p>Interactive Admin Dashboard</p>
+                        <span>JavaScript · Data Viz</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">LET'S GET IN TOUCH</h2>
+        <div class="contact-link">
+            <a href="https://github.com/mrfantasticAmazing" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.tiktok.com/@modern_webjama" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yusuf-jama-88845134a/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Yusuf Jama | Built with React & Passion</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Close sidebar when clicking a link
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
