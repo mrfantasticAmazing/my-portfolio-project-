@@ -9,39 +9,63 @@
 </head>
 <body>
 
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <nav id="navbar">
             <ul>
-                <li><a href="#welcome-section" class="bold-link">About</a></li>
-                <li><a href="#projects" class="bold-link">Work</a></li>
-                <li><a href="#contact" class="bold-link">Contact</a></li>
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 
     <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
 
+    <!-- HERO -->
     <section id="welcome-section">
         <div class="welcome-content">
-            <h1 class="yusuf">I Build Fast, Modern & Responsive Websites for Businesses</h1>
-            <h3>A Frontend Developer</h3>
-            <p>I help businesses create fast, clean, and professional web experiences that improve user engagement and conversion.</p>
+            <h1 class="yusuf">I build modern websites that convert</h1>
+            <h3>Frontend Developer • React Specialist</h3>
+
+            <p>
+                I create fast, responsive, and high-performing websites using React and modern JavaScript.
+                Focused on clean UI, smooth user experience, and helping businesses grow online.
+            </p>
+
             <div class="btn-box">
                 <a href="https://www.linkedin.com/in/yusuf-jama-88845134a/" target="_blank">HIRE ME</a>
                 <a href="#contact">LET'S TALK</a>
             </div>
         </div>
+
         <div class="image">
             <img src="images/image-removebg-preview.png" alt="Yusuf Jama">
         </div>
     </section>
 
-      <section id="projects">
-    <h2 class="section-title">HERE ARE SOME OF MY PROJECTS</h2>
-    <div class="projects-container">
-        
-        <div class="grid-item">
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <h2 class="section-title">WHAT I CAN DO</h2>
+
+        <div class="services-grid">
+            <div class="service-card">Build modern React websites</div>
+            <div class="service-card">Convert Figma to code</div>
+            <div class="service-card">Responsive business websites</div>
+            <div class="service-card">E-commerce frontends</div>
+            <div class="service-card">Interactive dashboards</div>
+            <div class="service-card">Improve UI/UX</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="section-title">HERE ARE SOME OF MY PROJECTS</h2>
+        <div class="projects-container">
+            
+         <div class="grid-item">
             <a href="projects/dentist-site/" target="_blank">
                 <img src="images/teeth_whitening-gVWxnHTH.png" alt="Modern Dental Clinic">
                 <div class="project-info">
@@ -50,32 +74,38 @@
                 </div>
             </a>
         </div>
+                </a>
+            </div>
 
-        <div class="grid-item">
-            <a href="projects/furniture-store/index.html" target="_blank">
-                <img src="images/furniture.jpg" alt="Furniture Store">
-                <div class="project-info">
-                    <p>Furniture E-commerce</p>
-                    <span>HTML · CSS · Design</span>
-                </div>
-            </a>
+            <div class="grid-item">
+                <a href="projects/furniture-store/index.html" target="_blank">
+                    <img src="images/furniture.jpg" alt="Furniture Store">
+                    <div class="project-info">
+                        <p>Furniture E-commerce</p>
+                        <span>HTML · CSS · Design</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="projects/dashboard/index.html" target="_blank">
+                    <img src="images/dashboard.jpg" alt="Dashboard">
+                    <div class="project-info">
+                        <p>Interactive Admin Dashboard</p>
+                        <span>JavaScript · Data Viz</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </section>
 
-        <div class="grid-item">
-            <a href="projects/dashboard/index.html" target="_blank">
-                <img src="images/dashboard.jpg" alt="Dashboard">
-                <div class="project-info">
-                    <p>Interactive Admin Dashboard</p>
-                    <span>JavaScript · Data Viz</span>
-                </div>
-            </a>
-        </div>
-
-    </div>
-</section>
-
+    <!-- CONTACT -->
     <section id="contact" class="contact-section">
-        <h2 class="section-title">LET'S GET IN TOUCH</h2>
+        <h2 class="section-title">LET'S WORK TOGETHER</h2>
+
+        <p>I'm available for freelance work. Let’s build something great.</p>
+
         <div class="contact-link">
             <a href="https://github.com/mrfantasticAmazing" target="_blank">
                 <i class="fab fa-github"></i>
@@ -90,21 +120,20 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Yusuf Jama | Built with React & Passion</p>
+        <p>&copy; 2026 Yusuf Jama — Built with Passion</p>
     </footer>
 
     <script>
         function toggleSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
+            document.getElementById('sidebar').classList.toggle('active');
         }
 
-        // Close sidebar when clicking a link
         document.querySelectorAll('#navbar a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('sidebar').classList.remove('active');
             });
         });
     </script>
+
 </body>
 </html>
